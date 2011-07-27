@@ -33,7 +33,6 @@ public class WindowedSeekBarActivity extends Activity implements SeekBarChangeLi
 		double span = ceiling - floor;
 		double lowval = floor + (span/100 * (double)Thumb1Value);
 		double highval = floor + (span/100 * (double)Thumb2Value);
-		
 		tv3.setText("Low Value : " + lowval);
 		tv4.setText("High Value : "+ highval) ;
 	}

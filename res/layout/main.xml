@@ -4,7 +4,7 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:weightSum="1">
-    <com.umfundi.WindowedSeekBar android:layout_marginTop="50dip" android:scaleType="fitXY" android:id="@+id/windowedseekbar" android:layout_width="fill_parent" android:src="@drawable/bgh" android:layout_height="wrap_content"></com.umfundi.WindowedSeekBar>
+    <com.umfundi.WindowedSeekBar android:src="@drawable/bgh" android:layout_marginTop="50dip" android:scaleType="fitXY" android:layout_width="fill_parent" android:layout_height="wrap_content" android:id="@+id/windowedseekbar"></com.umfundi.WindowedSeekBar>
 	<TextView android:text="TextView" android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/textView1"></TextView>
 	<TextView android:text="TextView" android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/textView2"></TextView>
 	<TextView android:text="TextView" android:id="@+id/textView3" android:layout_width="wrap_content" android:layout_height="wrap_content"></TextView>

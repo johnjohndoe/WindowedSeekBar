@@ -23,6 +23,10 @@ public class WindowedSeekBar extends ImageView {
 			R.drawable.centre_bar);
 	private Bitmap leadtrail = BitmapFactory.decodeResource(getResources(),
 			R.drawable.leader);
+	private Bitmap left_end = BitmapFactory.decodeResource(getResources(),
+			R.drawable.left_end);
+	private Bitmap right_end = BitmapFactory.decodeResource(getResources(),
+			R.drawable.right_end);
 	
 	private int thumblX, thumbrX;
 	private int thumb1Value, thumb2Value;
@@ -75,9 +79,11 @@ public class WindowedSeekBar extends ImageView {
 	@Override
 	protected void onDraw(Canvas canvas) {
 		super.onDraw(canvas);
-		for (int i=0;i<thumblX - thumbl.getWidth();i++)
+		canvas.drawBitmap(left_end,0,10,paint);
+		canvas.drawBitmap(right_end,getWidth()-7,10,paint);
+		for (int i=7;i<thumblX - thumbl.getWidth();i++)
 			canvas.drawBitmap(leadtrail,i,10,paint);
-		for (int i=thumbrX +thumbr.getWidth();i<getWidth();i++)
+		for (int i=thumbrX +thumbr.getWidth();i<getWidth()-7;i++)
 			canvas.drawBitmap(leadtrail,i,10,paint);
 		
 		for (int i=thumblX - thumbl.getWidth();i<thumbrX +thumbr.getWidth();i++)
